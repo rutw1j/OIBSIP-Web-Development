@@ -1,0 +1,53 @@
+body {
+    min-height: 100vh;
+    background-color: #071013;
+    overflow: auto;
+    opacity: 0;
+    filter: blur(5px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+h1 {
+    font-size: 8vh;
+    color: aquamarine !important;
+}
+
+.cust-width {
+    width: 40%;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .cust-width{
+        width: 70%;
+    }
+
+    .btn {
+        max-width: 40%;
+    }
+  }
+  
+
+#tc-input, #tc-select, li{
+    background-color: lavender;
+}
+
+li {
+    border-bottom: 1px solid lightslategray;
+    padding: 2px;
+}
+
+li:last-of-type {
+    border-bottom: none;
+}
