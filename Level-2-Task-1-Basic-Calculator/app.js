@@ -1,9 +1,20 @@
 window.onload = function() {
 
     // initializing tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    const tooltips = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+
+    // Add click event listener to the buttons
+    tooltipTriggerList.forEach(function (button) {
+        button.addEventListener("click", function () {
+        // Hide the tooltip associated with the clicked button
+        const tooltip = tooltips.find(function (t) {
+            return t._element === button;
+        });
+        tooltip.hide();
+        });
     });
 
     // Get the calculator elements
@@ -19,9 +30,9 @@ window.onload = function() {
     const brackets = document.querySelectorAll(".bracket");
   
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        ans.removeAttribute("title");
-        sqrt.removeAttribute("title");
-        reset.removeAttribute("title");
+        ans.setAttribute("title", "");
+        sqrt.removeAttribute("data-bs-toggle");
+        reset.removeAttributeNS("title");
     }
 
     // Set current value of display to 0
