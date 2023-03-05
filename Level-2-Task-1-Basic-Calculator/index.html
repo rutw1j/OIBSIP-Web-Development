@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <!-- popper and js separately -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+        <script type="text/javascript" src="app.js"></script>
+
+        <link rel="icon" href="https://img.icons8.com/doodle/48/null/apple-calculator.png">
+
+
+        <title>Calculator</title>
+        
+    </head>
+
+    <body>
+
+        <main>
+            
+            <h1 class="display-1">Calculator</h1><br>
+
+            <div class="calc-ui">
+
+                <div class="calc-ui-inner">
+
+                    <form>
+
+                        <div class="calc-display fs-3">
+    
+                            <input type="text" id="calc-ip-display" value="0" readonly><br>
+                            <input type="text" id="calc-op-display" value="0" readonly>
+    
+                        </div>
+                        
+                        <div class="calc-buttons">
+        
+                            <button type="reset" class="calc-reset" data-key="l" data-bs-toggle="tooltip" data-bs-placement="left" title="you can use keyboard key 'l' ">AC</button>
+                            <button type="button" class="calc-clear" data-key="Backspace">C</button>
+                            <button type="button" class="bracket" data-key="(">(</button>
+                            <button type="button" class="bracket" data-key=")">)</button>
+                            <button type="button" class="calc-ans" data-key="p" data-bs-toggle="tooltip" data-bs-placement="right" title="you can use keyboard key 'p' ">ANS</button>
+        
+                        </div>
+                        
+                        <div class="calc-buttons">
+        
+                            <button type="button" class="number" data-key="7">7</button>
+                            <button type="button" class="number" data-key="8">8</button>
+                            <button type="button" class="number" data-key="9">9</button>
+                            <button type="button" class="operator" data-key="%">%</button>
+                            <button type="button" class="calc-sqrt" data-key="m" data-bs-toggle="tooltip" data-bs-placement="right" title="you can use keyboard key 'm' ">&radic;</button>
+        
+                        </div>
+                        
+                        <div class="calc-buttons">
+        
+                            <button type="button" class="number" data-key="4">4</button>
+                            <button type="button" class="number" data-key="5">5</button>
+                            <button type="button" class="number" data-key="6">6</button>
+                            <button type="button" class="operator" data-key="*">*</button>
+                            <button type="button" class="operator" data-key="/">/</button>    
+        
+                        </div>
+                        
+                        <div class="calc-buttons">
+        
+                            <button type="button" class="number" data-key="1">1</button>
+                            <button type="button" class="number" data-key="2">2</button>
+                            <button type="button" class="number" data-key="3">3</button>
+                            <button type="button" class="operator" data-key="+">+</button>
+                            <button type="button" class="operator" data-key="-">-</button>
+        
+                        </div>
+                        
+                        <div class="calc-buttons">
+        
+                            <button type="button" class="number" id="dot-btn" data-key=".">.</button>
+                            <button type="button" class="number" data-key="0">0</button>
+                            <button type="submit" class="calc-submit" id="submit-btn" data-key="Enter">=</button>
+        
+                        </div>
+                        
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <footer>
+                <p>Made by <a href="mailto:rutwij.patankar2810@gmail.com" target="_blank">Rutwij Patankar</a></p>
+            </footer>
+
+
+        </main>
+
+    </body>
+
+</html>
