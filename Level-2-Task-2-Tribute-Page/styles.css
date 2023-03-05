@@ -1,0 +1,134 @@
+body {
+    max-width: 100%;
+    background-image: url("bg-image.jpg");
+    background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    img {
+        height: auto;
+        width: 80%;
+    }
+    p, li, q {
+        font-size: 3vh;
+    }
+
+    .large-container{
+        width: 90%;
+    }
+    
+    .med-container {
+        width: 80%;
+    }
+}
+  
+
+main {
+    max-width: 100%;
+}
+
+img {
+    width: 65%;
+    height: auto;
+}
+
+.white-div {
+    background-color: whitesmoke;
+}
+
+.large-container{
+    width: 70%;
+}
+
+.med-container {
+    width: 60%;
+}
+
+.large-container p, .med-container ul {
+    text-align: justify;
+}
+
+.spaced-letters {
+    letter-spacing: 3px;
+}
+
+.sp-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.sp-show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+@media(prefers-reduced-motion){
+    .sp-hidden {
+        transition: none;
+    }
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    box-sizing: border-box;
+    background-color:whitesmoke;
+}
+
+/* Slides */
+.mySlides {
+    box-sizing: border-box;
+    display: none;
+    padding: 0px 40px;
+    text-align: center;
+}
+
+.mySlides.active {
+    background-color: transparent;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+border-radius: 50%;
+margin: 0 2px;
+background-color: #bbb;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+.q {
+    font-style: italic;
+}
